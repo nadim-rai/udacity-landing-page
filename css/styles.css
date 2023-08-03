@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+*, 
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    background-color: #031834;
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    width: 90%;
+    height: 100%;
+    margin:0 auto;
+}
+.main_hero{
+    border: 1px solid #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_hero h1{
+    font-size: 10vw;
+}
+.section_container_1,
+.section_container_3{
+    width: 50%;
+}
+.section_container_2,
+.section_container_4{
+    width: 50%;
+    margin-left: auto; 
+    margin-right: 0;
+}
+.section_container_1 h2{
+    font-size: 68px;
+    border-bottom: 1px solid yellow;
+}
+.section_container_1 p{
+    font-size: 20px;
+}
+.section_container_2 h2{
+    text-align: right;
+    font-size: 68px;
+    border-bottom: 1px solid yellow;
+}
+.section_container_2 p{
+    font-size: 20px;
+    text-align: right;
+}
+.section_container_3 h2{
+    font-size: 68px;
+    border-bottom: 1px solid yellow;
+}
+.section_container_3 p{
+    font-size: 20px;
+}
+.section_container_4 h2{
+    text-align: right;
+    font-size: 68px;
+    border-bottom: 1px solid yellow;
+}
+.section_container_4 p{
+    font-size: 20px;
+    text-align: right;
+}
+#section1{
+    height: 100vh;
+}
+#section2{
+    height: 100vh;
+}
+#section3{
+    height: 100vh;
+}
+#section4{
+    height: 100vh;
+}
