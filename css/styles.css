@@ -25,6 +25,7 @@ body{
     height: 50px;
     width: 100%;
     overflow: hidden;
+    z-index: 100;
 }
 
 #navbar_ul{
@@ -64,10 +65,15 @@ main{
     font-size: 10vw;
 }
 
+section{
+    position: relative;
+}
+
 .section h2{
     font-size: 38px;
     border-bottom: 1px solid yellow;
 }
+
 .section p{
     line-height: 1.4;
     font-size: 19px;
@@ -97,6 +103,52 @@ main{
     text-align: right;
 }
 
+/* animation for active section */
+
+/* add animating circle to odd number section*/
+.circle_left{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:rgba(255,255,255, 0.2);
+    position: absolute;
+    top: 55px;
+    animation: animate_left 4s linear  infinite;
+}
+@keyframes animate_left{
+    0%{
+        transform: translateX(0px) ;
+    }
+    50%{
+        transform: translateX(120px);
+    }
+    100%{
+        transform: translateX(0px) rotateY(360deg);
+    }
+}
+
+/* add animating circle to even number section*/
+.circle_right{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:rgba(255,255,255, 0.2);
+    position: absolute;
+    top: 55px;
+    animation: animate_right 4s linear  infinite;
+}
+@keyframes animate_right{
+    0%{
+        transform: translateX(320px) ;
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(320px) rotateY(360deg);
+    }
+}
+
 @media (min-width: 768px){
 
     #navbar_ul{
@@ -118,6 +170,24 @@ main{
 
     .section p{
         font-size: 20px;
+    }
+
+     /* animation for active section */
+    /* add animating circle to even number section*/
+    
+    .circle_left, .circle_right{
+        top: 160px;
+    }
+    @keyframes animate_right{
+        0%{
+            transform: translateX(1380px) ;
+        }
+        50%{
+            transform: translateX(1260px);
+        }
+        100%{
+            transform: translateX(1380px) rotateY(360deg);
+        }
     }
 }
 
