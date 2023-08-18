@@ -42,6 +42,20 @@ window.addEventListener('scroll', e =>{
             li.classList.add('active_li');
         }    
     })
+    
+    // Add class to  a section that is being viewed (Section Active State)
+    active_section.forEach(e =>{
+        e.classList.remove('circle_left','circle_right');
+        if(currentSection !== ''){
+            let odd_even = +currentSection.slice(-1);
+            let array_position = odd_even - 1;
+            if(array_position % 2 === 0){
+                active_section[array_position].classList.add('circle_left')
+            }else{
+                active_section[array_position].classList.add('circle_right')
+            }   
+        }  
+    })
 
 });
 
