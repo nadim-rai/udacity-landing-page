@@ -25,3 +25,23 @@ nav_li.forEach(ele => {
     })
 })
 
+window.addEventListener('scroll', e =>{
+    let currentSection = '';
+    list.forEach(section =>{
+        let section_top = window.scrollY + section.getBoundingClientRect().top; //section location relative to the viewport
+        if(section_top <= scrollY + 350){
+            currentSection = section.id;
+        }
+    })
+
+    //Highlight active navigation menu li (Navbar Menu Active State)
+    nav_li.forEach(li =>{
+       let li_id = li.firstChild.getAttribute("href").slice(1);
+        li.classList.remove('active_li');
+        if(li_id === currentSection){
+            li.classList.add('active_li');
+        }    
+    })
+
+});
+
